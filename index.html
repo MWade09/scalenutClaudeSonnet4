@@ -1,0 +1,2785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scalenut — AI Content Intelligence That Scales Empires</title>
+    <meta name="description" content="The most advanced AI content platform trusted by Fortune 500 companies. Transform your content strategy with military-grade precision.">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" as="style">
+    
+    <!-- Critical fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* Advanced CSS Custom Properties System */
+        :root {
+            /* Sophisticated Color Palette */
+            --primary-50: #f0f9ff;
+            --primary-100: #e0f2fe;
+            --primary-200: #bae6fd;
+            --primary-300: #7dd3fc;
+            --primary-400: #38bdf8;
+            --primary-500: #0ea5e9;
+            --primary-600: #0284c7;
+            --primary-700: #0369a1;
+            --primary-800: #075985;
+            --primary-900: #0c4a6e;
+            --primary-950: #082f49;
+            
+            --secondary-50: #fdf4ff;
+            --secondary-100: #fae8ff;
+            --secondary-200: #f5d0fe;
+            --secondary-300: #f0abfc;
+            --secondary-400: #e879f9;
+            --secondary-500: #d946ef;
+            --secondary-600: #c026d3;
+            --secondary-700: #a21caf;
+            --secondary-800: #86198f;
+            --secondary-900: #701a75;
+            --secondary-950: #4a044e;
+            
+            --accent-50: #f0fdf4;
+            --accent-100: #dcfce7;
+            --accent-200: #bbf7d0;
+            --accent-300: #86efac;
+            --accent-400: #4ade80;
+            --accent-500: #22c55e;
+            --accent-600: #16a34a;
+            --accent-700: #15803d;
+            --accent-800: #166534;
+            --accent-900: #14532d;
+            --accent-950: #052e16;
+            
+            /* Neutral Palette */
+            --neutral-0: #ffffff;
+            --neutral-50: #fafafa;
+            --neutral-100: #f5f5f5;
+            --neutral-200: #e5e5e5;
+            --neutral-300: #d4d4d4;
+            --neutral-400: #a3a3a3;
+            --neutral-500: #737373;
+            --neutral-600: #525252;
+            --neutral-700: #404040;
+            --neutral-800: #262626;
+            --neutral-900: #171717;
+            --neutral-950: #0a0a0a;
+            
+            /* Advanced Gradients */
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            --gradient-aurora: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #ffeaa7 75%, #81ecec 100%);
+            --gradient-sunset: linear-gradient(135deg, #fa709a 0%, #fee140 50%, #fc466b 100%);
+            --gradient-ocean: linear-gradient(135deg, #667eea 0%, #0093e9 100%);
+            --gradient-cosmic: linear-gradient(135deg, #8B5CF6 0%, #EC4899 25%, #06B6D4 50%, #10B981 75%, #F59E0B 100%);
+            --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.1) 100%);
+            --gradient-mesh: 
+                radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%),
+                radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
+                radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
+                radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
+            
+            /* Sophisticated Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-DEFAULT: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+            --shadow-glow: 0 0 20px rgba(102, 126, 234, 0.5);
+            --shadow-glow-lg: 0 0 40px rgba(102, 126, 234, 0.3);
+            --shadow-colored: 0 25px 50px -12px rgba(102, 126, 234, 0.25);
+            
+            /* Advanced Typography Scale */
+            --font-mono: 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            
+            /* Precision Spacing System */
+            --space-px: 1px;
+            --space-0: 0px;
+            --space-0_5: 0.125rem;
+            --space-1: 0.25rem;
+            --space-1_5: 0.375rem;
+            --space-2: 0.5rem;
+            --space-2_5: 0.625rem;
+            --space-3: 0.75rem;
+            --space-3_5: 0.875rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-7: 1.75rem;
+            --space-8: 2rem;
+            --space-9: 2.25rem;
+            --space-10: 2.5rem;
+            --space-11: 2.75rem;
+            --space-12: 3rem;
+            --space-14: 3.5rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --space-24: 6rem;
+            --space-28: 7rem;
+            --space-32: 8rem;
+            --space-36: 9rem;
+            --space-40: 10rem;
+            --space-44: 11rem;
+            --space-48: 12rem;
+            --space-52: 13rem;
+            --space-56: 14rem;
+            --space-60: 15rem;
+            --space-64: 16rem;
+            --space-72: 18rem;
+            --space-80: 20rem;
+            --space-96: 24rem;
+            
+            /* Advanced Border Radius */
+            --radius-none: 0px;
+            --radius-sm: 0.125rem;
+            --radius-DEFAULT: 0.25rem;
+            --radius-md: 0.375rem;
+            --radius-lg: 0.5rem;
+            --radius-xl: 0.75rem;
+            --radius-2xl: 1rem;
+            --radius-3xl: 1.5rem;
+            --radius-4xl: 2rem;
+            --radius-full: 9999px;
+            
+            /* Advanced Animations */
+            --duration-75: 75ms;
+            --duration-100: 100ms;
+            --duration-150: 150ms;
+            --duration-200: 200ms;
+            --duration-300: 300ms;
+            --duration-500: 500ms;
+            --duration-700: 700ms;
+            --duration-1000: 1000ms;
+            
+            --ease-linear: linear;
+            --ease-in: cubic-bezier(0.4, 0, 1, 1);
+            --ease-out: cubic-bezier(0, 0, 0.2, 1);
+            --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+            --ease-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            --ease-elastic: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+            --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        /* Advanced Reset & Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-feature-settings: "rlig" 1, "calt" 1, "kern" 1;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        body {
+            font-family: var(--font-sans);
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--neutral-900);
+            background: var(--neutral-0);
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        /* Advanced Mesh Background */
+        .mesh-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-mesh);
+            opacity: 0.03;
+            z-index: -2;
+            animation: meshShift 20s ease-in-out infinite;
+        }
+        
+        @keyframes meshShift {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            33% { transform: scale(1.1) rotate(1deg); }
+            66% { transform: scale(0.95) rotate(-1deg); }
+        }
+        
+        /* Sophisticated Grid Overlay */
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.02;
+            z-index: -1;
+            background-image: 
+                linear-gradient(var(--neutral-200) 1px, transparent 1px),
+                linear-gradient(90deg, var(--neutral-200) 1px, transparent 1px);
+            background-size: 100px 100px;
+            animation: gridFloat 30s linear infinite;
+        }
+        
+        @keyframes gridFloat {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(100px, 100px); }
+        }
+        
+        /* Ultra-Premium Navigation */
+        .navigation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all var(--duration-300) var(--ease-out);
+        }
+        
+        .navigation.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px) saturate(180%);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+        
+        .nav-logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--neutral-900);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            transition: all var(--duration-300) var(--ease-out);
+        }
+        
+        .nav-logo::before {
+            content: '';
+            width: 32px;
+            height: 32px;
+            background: var(--gradient-cosmic);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-colored);
+            animation: logoGlow 4s ease-in-out infinite;
+        }
+        
+        @keyframes logoGlow {
+            0%, 100% { box-shadow: var(--shadow-colored); transform: scale(1); }
+            50% { box-shadow: var(--shadow-glow-lg); transform: scale(1.05); }
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: var(--space-8);
+            list-style: none;
+        }
+        
+        .nav-link {
+            position: relative;
+            color: var(--neutral-600);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            letter-spacing: -0.01em;
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-lg);
+            transition: all var(--duration-300) var(--ease-out);
+            overflow: hidden;
+        }
+        
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-glass);
+            opacity: 0;
+            transition: opacity var(--duration-300) var(--ease-out);
+            z-index: -1;
+        }
+        
+        .nav-link:hover {
+            color: var(--neutral-900);
+            transform: translateY(-1px);
+        }
+        
+        .nav-link:hover::before {
+            opacity: 1;
+        }
+        
+        .nav-cta {
+            background: var(--gradient-cosmic);
+            color: white;
+            padding: var(--space-3) var(--space-6);
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: -0.01em;
+            box-shadow: var(--shadow-colored);
+            transition: all var(--duration-300) var(--ease-out);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left var(--duration-500) var(--ease-out);
+        }
+        
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glow-lg);
+        }
+        
+        .nav-cta:hover::before {
+            left: 100%;
+        }
+        
+        /* Revolutionary Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, 
+                rgba(102, 126, 234, 0.03) 0%, 
+                rgba(236, 72, 153, 0.03) 25%,
+                rgba(6, 182, 212, 0.03) 50%,
+                rgba(16, 185, 129, 0.03) 75%,
+                rgba(245, 158, 11, 0.03) 100%
+            );
+        }
+        
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            position: relative;
+            z-index: 10;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            background: rgba(102, 126, 234, 0.1);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            color: var(--primary-700);
+            padding: var(--space-2) var(--space-5);
+            border-radius: var(--radius-full);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-bottom: var(--space-8);
+            backdrop-filter: blur(10px);
+            animation: badgeFloat 0.8s var(--ease-back) 0.2s both;
+            text-transform: uppercase;
+        }
+        
+        .hero-badge::before {
+            content: '✨';
+            font-size: 12px;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
+            50% { opacity: 0.7; transform: scale(1.2) rotate(180deg); }
+        }
+        
+        .hero-title {
+            font-size: clamp(48px, 8vw, 84px);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: var(--space-8);
+            background: var(--gradient-cosmic);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleReveal 1s var(--ease-back) 0.4s both;
+            position: relative;
+        }
+        
+        .hero-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-cosmic);
+            border-radius: var(--radius-full);
+            animation: underlineExpand 1s var(--ease-out) 1.2s both;
+        }
+        
+        .hero-description {
+            font-size: 20px;
+            line-height: 1.6;
+            color: var(--neutral-600);
+            margin-bottom: var(--space-12);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: descriptionFade 1s var(--ease-out) 0.6s both;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: var(--space-4);
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: ctaSlide 1s var(--ease-back) 0.8s both;
+        }
+        
+        /* Revolutionary Button System */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-4) var(--space-8);
+            border-radius: var(--radius-2xl);
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            letter-spacing: -0.01em;
+            transition: all var(--duration-300) var(--ease-out);
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+            transform-style: preserve-3d;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-cosmic);
+            color: white;
+            box-shadow: var(--shadow-colored);
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity var(--duration-300) var(--ease-out);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: var(--shadow-glow-lg);
+        }
+        
+        .btn-primary:hover::before {
+            opacity: 1;
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            color: var(--neutral-700);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        /* Advanced Floating Elements */
+        .floating-orbs {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--gradient-cosmic);
+            opacity: 0.1;
+            animation: orbFloat 8s ease-in-out infinite;
+            filter: blur(1px);
+        }
+        
+        .orb:nth-child(1) {
+            width: 200px; height: 200px;
+            top: 10%; left: 10%;
+            animation-delay: 0s;
+            background: var(--gradient-ocean);
+        }
+        
+        .orb:nth-child(2) {
+            width: 150px; height: 150px;
+            top: 20%; right: 20%;
+            animation-delay: 2s;
+            background: var(--gradient-sunset);
+        }
+        
+        .orb:nth-child(3) {
+            width: 180px; height: 180px;
+            bottom: 20%; left: 30%;
+            animation-delay: 4s;
+            background: var(--gradient-aurora);
+        }
+        
+        .orb:nth-child(4) {
+            width: 120px; height: 120px;
+            bottom: 30%; right: 10%;
+            animation-delay: 6s;
+            background: var(--gradient-cosmic);
+        }
+        
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+            25% { transform: translate(20px, -20px) rotate(90deg) scale(1.1); }
+            50% { transform: translate(-15px, -40px) rotate(180deg) scale(0.9); }
+            75% { transform: translate(-30px, -10px) rotate(270deg) scale(1.05); }
+        }
+        
+        /* Revolutionary Features Section */
+        .features {
+            padding: var(--space-32) 0;
+            background: linear-gradient(180deg, 
+                var(--neutral-0) 0%, 
+                var(--neutral-50) 50%, 
+                var(--neutral-0) 100%
+            );
+            position: relative;
+        }
+        
+        .features-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+        }
+        
+        .features-header {
+            text-align: center;
+            margin-bottom: var(--space-20);
+        }
+        
+        .features-badge {
+            display: inline-block;
+            background: rgba(236, 72, 153, 0.1);
+            color: var(--secondary-700);
+            padding: var(--space-2) var(--space-5);
+            border-radius: var(--radius-full);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: var(--space-6);
+            border: 1px solid rgba(236, 72, 153, 0.2);
+        }
+        
+        .features-title {
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: var(--space-6);
+            background: var(--gradient-cosmic);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .features-description {
+            font-size: 20px;
+            color: var(--neutral-600);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: var(--space-8);
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: var(--radius-3xl);
+            padding: var(--space-10);
+            position: relative;
+            overflow: hidden;
+            transition: all var(--duration-500) var(--ease-out);
+            box-shadow: var(--shadow-lg);
+            transform-style: preserve-3d;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-cosmic);
+            transform: scaleX(0);
+            transition: transform var(--duration-500) var(--ease-out);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px) rotateX(2deg);
+            box-shadow: var(--shadow-2xl);
+            border-color: rgba(102, 126, 234, 0.3);
+        }
+        
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-cosmic);
+            border-radius: var(--radius-2xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-6);
+            font-size: 32px;
+            color: white;
+            box-shadow: var(--shadow-colored);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left var(--duration-700) var(--ease-out);
+        }
+        
+        .feature-card:hover .feature-icon::before {
+            left: 100%;
+        }
+        
+        .feature-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: var(--space-4);
+            color: var(--neutral-900);
+            letter-spacing: -0.01em;
+        }
+        
+        .feature-description {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--neutral-600);
+            margin-bottom: var(--space-6);
+        }
+        
+        .feature-link {
+            color: var(--primary-600);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            transition: all var(--duration-300) var(--ease-out);
+            letter-spacing: -0.01em;
+        }
+        
+        .feature-link:hover {
+            gap: var(--space-3);
+            color: var(--primary-700);
+        }
+        
+        /* Advanced Stats Section */
+        .stats {
+            padding: var(--space-24) 0;
+            background: var(--neutral-900);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-cosmic);
+            opacity: 0.1;
+            animation: statsGlow 10s ease-in-out infinite;
+        }
+        
+        @keyframes statsGlow {
+            0%, 100% { opacity: 0.1; transform: scale(1); }
+            50% { opacity: 0.2; transform: scale(1.05); }
+        }
+        
+        .stats-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-12);
+            text-align: center;
+        }
+        
+        .stat-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all var(--duration-700) var(--ease-out);
+        }
+        
+        .stat-item.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .stat-number {
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: var(--space-2);
+            background: var(--gradient-aurora);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            font-family: var(--font-mono);
+        }
+        
+        .stat-label {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+        
+        /* Ultra-Premium Testimonials */
+        .testimonials {
+            padding: var(--space-32) 0;
+            background: var(--neutral-0);
+        }
+        
+        .testimonials-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+        }
+        
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: var(--space-20);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: var(--space-8);
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: var(--radius-3xl);
+            padding: var(--space-10);
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            overflow: hidden;
+            transition: all var(--duration-500) var(--ease-out);
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: var(--space-6);
+            left: var(--space-6);
+            font-size: 80px;
+            color: var(--primary-200);
+            font-family: Georgia, serif;
+            line-height: 1;
+            z-index: 0;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-2xl);
+        }
+        
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-text {
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--neutral-700);
+            margin-bottom: var(--space-8);
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+        }
+        
+        .author-avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: var(--radius-full);
+            background: var(--gradient-cosmic);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+            box-shadow: var(--shadow-colored);
+        }
+        
+        .author-info h4 {
+            font-weight: 600;
+            color: var(--neutral-900);
+            margin-bottom: var(--space-1);
+            font-size: 16px;
+        }
+        
+        .author-info p {
+            color: var(--neutral-600);
+            font-size: 14px;
+        }
+        
+        /* Revolutionary CTA Section */
+        .cta-section {
+            padding: var(--space-32) 0;
+            background: var(--gradient-cosmic);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255 255 255 / 0.05)'%3e%3cpath d='m0 .5 32 32M32 .5 0 32'/%3e%3c/svg%3e");
+            animation: patternMove 20s linear infinite;
+        }
+        
+        @keyframes patternMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(32px, 32px); }
+        }
+        
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-title {
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: var(--space-6);
+            letter-spacing: -0.02em;
+        }
+        
+        .cta-description {
+            font-size: 20px;
+            margin-bottom: var(--space-12);
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: var(--space-4);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Premium Footer */
+        .footer {
+            background: var(--neutral-950);
+            color: white;
+            padding: var(--space-20) 0 var(--space-8);
+        }
+        
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-12);
+            margin-bottom: var(--space-12);
+        }
+        
+        .footer-section h3 {
+            font-weight: 700;
+            margin-bottom: var(--space-6);
+            font-size: 18px;
+            letter-spacing: -0.01em;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: var(--space-3);
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color var(--duration-300) var(--ease-out);
+            font-size: 15px;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--space-8);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+        
+        /* Ultra-Premium Pricing Section */
+        .pricing {
+            padding: var(--space-32) 0;
+            background: linear-gradient(180deg, 
+                var(--neutral-0) 0%, 
+                var(--neutral-50) 50%, 
+                var(--neutral-0) 100%
+            );
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(102, 126, 234, 0.03) 0%, transparent 70%);
+        }
+        
+        .pricing-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .pricing-header {
+            text-align: center;
+            margin-bottom: var(--space-20);
+        }
+        
+        .pricing-badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--accent-700);
+            padding: var(--space-2) var(--space-5);
+            border-radius: var(--radius-full);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: var(--space-6);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+        
+        .pricing-title {
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: var(--space-6);
+            background: var(--gradient-cosmic);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .pricing-description {
+            font-size: 20px;
+            color: var(--neutral-600);
+            max-width: 600px;
+            margin: 0 auto var(--space-12);
+            line-height: 1.6;
+        }
+        
+        .pricing-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-4);
+            margin-bottom: var(--space-16);
+        }
+        
+        .pricing-toggle-label {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--neutral-600);
+            transition: all var(--duration-300) var(--ease-out);
+        }
+        
+        .pricing-toggle-label.active {
+            color: var(--neutral-900);
+            transform: scale(1.05);
+        }
+        
+        .toggle-switch {
+            position: relative;
+            width: 64px;
+            height: 32px;
+            background: var(--gradient-cosmic);
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            box-shadow: var(--shadow-colored);
+            transition: all var(--duration-300) var(--ease-out);
+        }
+        
+        .toggle-switch::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 28px;
+            height: 28px;
+            background: white;
+            border-radius: var(--radius-full);
+            transition: all var(--duration-300) var(--ease-back);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .toggle-switch.monthly::before {
+            transform: translateX(32px);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: var(--space-8);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: var(--radius-3xl);
+            padding: var(--space-10);
+            position: relative;
+            overflow: hidden;
+            transition: all var(--duration-500) var(--ease-out);
+            box-shadow: var(--shadow-xl);
+            transform-style: preserve-3d;
+        }
+        
+        .pricing-card.featured {
+            transform: scale(1.05);
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            box-shadow: var(--shadow-2xl), 0 0 40px rgba(102, 126, 234, 0.2);
+        }
+        
+        .pricing-card.featured::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-cosmic);
+        }
+        
+        .pricing-card.featured .popular-badge {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-cosmic);
+            color: white;
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-full);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            box-shadow: var(--shadow-colored);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-8px) rotateX(2deg);
+            box-shadow: var(--shadow-2xl);
+            border-color: rgba(102, 126, 234, 0.4);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: translateY(-8px) rotateX(2deg) scale(1.05);
+        }
+        
+        .pricing-plan-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--neutral-900);
+            margin-bottom: var(--space-2);
+            letter-spacing: -0.01em;
+        }
+        
+        .pricing-plan-description {
+            font-size: 14px;
+            color: var(--neutral-600);
+            margin-bottom: var(--space-8);
+            line-height: 1.5;
+        }
+        
+        .pricing-amount {
+            display: flex;
+            align-items: baseline;
+            gap: var(--space-2);
+            margin-bottom: var(--space-2);
+        }
+        
+        .pricing-currency {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--neutral-700);
+        }
+        
+        .pricing-price {
+            font-size: 48px;
+            font-weight: 900;
+            background: var(--gradient-cosmic);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            font-family: var(--font-mono);
+        }
+        
+        .pricing-period {
+            font-size: 16px;
+            color: var(--neutral-600);
+            font-weight: 500;
+        }
+        
+        .pricing-savings {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--accent-700);
+            padding: var(--space-1) var(--space-3);
+            border-radius: var(--radius-lg);
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: var(--space-8);
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all var(--duration-300) var(--ease-back);
+        }
+        
+        .pricing-savings.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: var(--space-10);
+        }
+        
+        .pricing-feature {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            padding: var(--space-2) 0;
+            font-size: 15px;
+            color: var(--neutral-700);
+            line-height: 1.5;
+        }
+        
+        .pricing-feature::before {
+            content: '✓';
+            width: 20px;
+            height: 20px;
+            background: var(--gradient-cosmic);
+            color: white;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .pricing-cta {
+            width: 100%;
+            background: var(--gradient-cosmic);
+            color: white;
+            border: none;
+            padding: var(--space-4) var(--space-6);
+            border-radius: var(--radius-2xl);
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: -0.01em;
+            cursor: pointer;
+            transition: all var(--duration-300) var(--ease-out);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-colored);
+        }
+        
+        .pricing-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left var(--duration-500) var(--ease-out);
+        }
+        
+        .pricing-cta:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: var(--shadow-glow-lg);
+        }
+        
+        .pricing-cta:hover::before {
+            left: 100%;
+        }
+        
+        .pricing-card.featured .pricing-cta {
+            background: var(--gradient-sunset);
+            box-shadow: 0 25px 50px -12px rgba(245, 158, 11, 0.25);
+        }
+        
+        .pricing-card.featured .pricing-cta:hover {
+            box-shadow: 0 0 40px rgba(245, 158, 11, 0.4);
+        }
+
+        /* Advanced Animations */
+        @keyframes badgeFloat {
+            from { opacity: 0; transform: translateY(20px) scale(0.9); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        
+        @keyframes titleReveal {
+            from { opacity: 0; transform: translateY(30px) rotateX(20deg); }
+            to { opacity: 1; transform: translateY(0) rotateX(0deg); }
+        }
+        
+        @keyframes underlineExpand {
+            from { width: 0; }
+            to { width: 100px; }
+        }
+        
+        @keyframes descriptionFade {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes ctaSlide {
+            from { opacity: 0; transform: translateY(30px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        
+        /* Scroll Reveal System */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all var(--duration-700) var(--ease-out);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .nav-menu { display: none; }
+            .features-grid { grid-template-columns: 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .pricing-card.featured { transform: none; }
+            .pricing-card.featured:hover { transform: translateY(-8px) rotateX(2deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-cta { flex-direction: column; align-items: center; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .pricing-toggle { flex-direction: column; gap: var(--space-2); }
+            .pricing-grid { grid-template-columns: 1fr; gap: var(--space-6); }
+        }
+        
+        @media (max-width: 480px) {
+            .nav-container { padding: 0 var(--space-4); }
+            .hero-container { padding: 0 var(--space-4); }
+            .stats-grid { grid-template-columns: 1fr; }
+            .pricing-container { padding: 0 var(--space-4); }
+            .pricing-grid { grid-template-columns: 1fr; gap: var(--space-4); }
+            .pricing-card { padding: var(--space-6); }
+        }
+        
+        /* Performance & Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        .btn:focus, .nav-link:focus {
+            outline: 2px solid var(--primary-400);
+            outline-offset: 2px;
+        }
+        
+        /* Advanced Loading State */
+        .loading {
+            opacity: 0;
+            animation: pageLoad 1s var(--ease-out) forwards;
+        }
+        
+        @keyframes pageLoad {
+            to { opacity: 1; }
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--neutral-100);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-cosmic);
+            border-radius: var(--radius-full);
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-700);
+        }
+    </style>
+</head>
+<body class="loading">
+    <!-- Advanced Background System -->
+    <div class="mesh-background"></div>
+    <div class="grid-overlay"></div>
+    
+    <!-- Ultra-Premium Navigation -->
+    <nav class="navigation" id="navigation">
+        <div class="nav-container">
+            <a href="https://scalenut.com/?fpr=mathew93" class="nav-logo">Scalenut</a>
+            <ul class="nav-menu">
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#testimonials" class="nav-link">Success Stories</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#enterprise" class="nav-link">Enterprise</a></li>
+                <li><a href="#resources" class="nav-link">Resources</a></li>
+            </ul>
+            <a href="https://www.scalenut.com/pricing/?fpr=mathew93" class="nav-cta" target="_blank">
+                Start Free Trial
+            </a>
+        </div>
+    </nav>
+    
+    <!-- Revolutionary Hero Section -->
+    <section class="hero">
+        <div class="floating-orbs">
+            <div class="orb"></div>
+            <div class="orb"></div>
+            <div class="orb"></div>
+            <div class="orb"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    Enterprise AI Platform
+                </div>
+                <h1 class="hero-title">
+                    Content Intelligence That Scales Empires
+                </h1>
+                <p class="hero-description">
+                    The world's most sophisticated AI content platform trusted by Fortune 500 companies. Transform your content strategy with military-grade precision and scale beyond imagination.
+                </p>
+                <div class="hero-cta">
+                    <a href="https://www.scalenut.com/pricing/?fpr=mathew93" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-rocket"></i>
+                        Start Free Trial
+                    </a>
+                    <a href="https://www.scalenut.com/schedule-demo/?fpr=mathew93" class="btn btn-secondary">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Revolutionary Features Section -->
+    <section class="features reveal" id="features">
+        <div class="features-container">
+            <div class="features-header">
+                <div class="features-badge">AI-Powered Excellence</div>
+                <h2 class="features-title">
+                    Beyond Content Creation.<br>
+                    <span style="background: var(--gradient-sunset); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Content Intelligence.</span>
+                </h2>
+                <p class="features-description">
+                    Our military-grade AI doesn't just create content—it architects entire content ecosystems that dominate markets and drive exponential growth.
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="feature-title">Neural Content Generation</h3>
+                    <p class="feature-description">
+                        Advanced GPT-4 powered content generation with proprietary algorithms that understand your industry, audience psychology, and competitive landscape at molecular level.
+                    </p>
+                    <a href="https://scalenut.com/?fpr=mathew93" class="feature-link">
+                        Explore Neural AI <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3 class="feature-title">Competitive Intelligence</h3>
+                    <p class="feature-description">
+                        Real-time competitive analysis that reveals content gaps, monitors competitor strategies, and identifies opportunities before your competition even knows they exist.
+                    </p>
+                    <a href="https://scalenut.com/?fpr=mathew93" class="feature-link">
+                        View Intelligence <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3 class="feature-title">Revenue-Driven SEO</h3>
+                    <p class="feature-description">
+                        SEO optimization that goes beyond rankings. Our AI identifies high-converting keywords, optimizes for buyer intent, and predicts search trends 6 months ahead.
+                    </p>
+                    <a href="https://scalenut.com/?fpr=mathew93" class="feature-link">
+                        See SEO Engine <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3 class="feature-title">Enterprise Orchestration</h3>
+                    <p class="feature-description">
+                        Scale content operations across global teams with advanced workflow automation, brand consistency enforcement, and performance attribution modeling.
+                    </p>
+                    <a href="https://scalenut.com/?fpr=mathew93" class="feature-link">
+                        Enterprise Suite <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="feature-title">Predictive Analytics</h3>
+                    <p class="feature-description">
+                        Machine learning models that predict content performance, optimize distribution timing, and forecast ROI with 94% accuracy across 12-month periods.
+                    </p>
+                    <a href="https://scalenut.com/?fpr=mathew93" class="feature-link">
+                        Analytics Suite <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3 class="feature-title">Brand Protection AI</h3>
+                    <p class="feature-description">
+                        Advanced AI that monitors brand mentions, detects reputation threats, and automatically generates response strategies to protect your brand equity 24/7.
+                    </p>
+                    <a href="https://scalenut.com/?fpr=mathew93" class="feature-link">
+                        Brand Shield <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Advanced Stats Section -->
+    <section class="stats reveal">
+        <div class="stats-container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="250000">0</span>
+                    <span class="stat-label">Enterprise Users</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="15000000">0</span>
+                    <span class="stat-label">Content Pieces Generated</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="847">0</span>
+                    <span class="stat-label">% Average ROI Increase</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="99.7">0</span>
+                    <span class="stat-label">% Uptime SLA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Ultra-Premium Testimonials -->
+    <section class="testimonials reveal" id="testimonials">
+        <div class="testimonials-container">
+            <div class="testimonials-header">
+                <div class="features-badge">Enterprise Testimonials</div>
+                <h2 class="features-title">
+                    Trusted by <span style="background: var(--gradient-ocean); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Industry Titans</span>
+                </h2>
+                <p class="features-description">
+                    See how Fortune 500 companies use Scalenut to achieve unprecedented content marketing results and dominate their markets.
+                </p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "Scalenut’s content is profound and factual. I rely on the "quora answer" and SEO modules to craft long-form content swiftly. Impressive results!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><img src="https://cdn.prod.website-files.com/60ef088dd8fef919efabb412/62a1dc3c714b1ed1ce6cc780_Benedict%20T.webp" alt="Benedict T."></div>
+                            <div class="author-info">
+                                <h4>Benedict T.</h4>
+                                <p>SEO Consultant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "Its long-form assistant is everything you need to create great article outlines. It shows you SERP data including your competitors & their article outlines."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><img src="https://cdn.prod.website-files.com/60ef088dd8fef919efabb412/62f340c0ff92d3af67bc284d_Carlos%20U.webp" style="border-radius: 300px; max-width: 75px;" alt="Carlos U."></div>
+                            <div class="author-info">
+                                <h4>Carlos U.</h4>
+                                <p>Digital Marketing Consultant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "The keyword grouping is a great feature. I also like the AI content writing interface. The cruise mode is very user-friendly. I highly recommend it."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><img src="https://cdn.prod.website-files.com/60ef088dd8fef919efabb412/64edc7461b1b4195cf79de28_kavitha.png" style="border-radius: 300px; max-width: 75px;" alt="Kavitha R."></div>
+                            <div class="author-info">
+                                <h4>Kavitha R.</h4>
+                                <p>International Marketing and Communications Representative</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Ultra-Premium Pricing Section -->
+    <section class="pricing reveal" id="pricing">
+        <div class="pricing-container">
+            <div class="pricing-header">
+                <div class="pricing-badge">Enterprise Pricing</div>
+                <h2 class="pricing-title">
+                    Scale Without <span style="background: var(--gradient-sunset); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Limits</span>
+                </h2>
+                <p class="pricing-description">
+                    Choose the perfect plan to scale your content empire. All plans include our military-grade AI, unlimited revisions, and world-class support.
+                </p>
+                <div class="pricing-toggle">
+                    <span class="pricing-toggle-label active" id="annual-label">Annual (Save 60%)</span>
+                    <div class="toggle-switch" id="pricing-toggle">
+                        <input type="checkbox" style="display: none;" id="pricing-checkbox">
+                    </div>
+                    <span class="pricing-toggle-label" id="monthly-label">Monthly</span>
+                </div>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="pricing-plan-name">Essential</h3>
+                    <p class="pricing-plan-description">Perfect for content creators and small teams getting started</p>
+                    <div class="pricing-amount">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-price" id="essential-price">20</span>
+                        <span class="pricing-period">/month</span>
+                    </div>
+                    <div class="pricing-savings" id="essential-savings">Save $348/year vs monthly</div>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">AI Content Generation (50,000 words/month)</li>
+                        <li class="pricing-feature">SEO Optimization & Research</li>
+                        <li class="pricing-feature">Competitive Analysis</li>
+                        <li class="pricing-feature">5 Brand Voices</li>
+                        <li class="pricing-feature">Basic Analytics Dashboard</li>
+                        <li class="pricing-feature">Email Support</li>
+                        <li class="pricing-feature">Chrome Extension</li>
+                    </ul>
+                    <button class="pricing-cta" onclick="window.open('https://www.scalenut.com/pricing/?fpr=mathew93', '_blank')">
+                        Start Essential Plan
+                    </button>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3 class="pricing-plan-name">Growth</h3>
+                    <p class="pricing-plan-description">For growing businesses ready to scale their content operations</p>
+                    <div class="pricing-amount">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-price" id="growth-price">32</span>
+                        <span class="pricing-period">/month</span>
+                    </div>
+                    <div class="pricing-savings" id="growth-savings">Save $564/year vs monthly</div>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">AI Content Generation (200,000 words/month)</li>
+                        <li class="pricing-feature">Advanced SEO Suite</li>
+                        <li class="pricing-feature">Real-time Competitive Intelligence</li>
+                        <li class="pricing-feature">20 Brand Voices</li>
+                        <li class="pricing-feature">Advanced Analytics & Reporting</li>
+                        <li class="pricing-feature">Priority Support</li>
+                        <li class="pricing-feature">Team Collaboration Tools</li>
+                        <li class="pricing-feature">Custom Templates Library</li>
+                        <li class="pricing-feature">API Access (10K calls/month)</li>
+                    </ul>
+                    <button class="pricing-cta" onclick="window.open('https://www.scalenut.com/pricing/?fpr=mathew93', '_blank')">
+                        Start Growth Plan
+                    </button>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3 class="pricing-plan-name">Pro</h3>
+                    <p class="pricing-plan-description">For enterprises requiring maximum scale and customization</p>
+                    <div class="pricing-amount">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-price" id="pro-price">60</span>
+                        <span class="pricing-period">/month</span>
+                    </div>
+                    <div class="pricing-savings" id="pro-savings">Save $1,068/year vs monthly</div>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">Unlimited AI Content Generation</li>
+                        <li class="pricing-feature">Enterprise SEO & SERP Tracking</li>
+                        <li class="pricing-feature">Advanced Competitor Monitoring</li>
+                        <li class="pricing-feature">Unlimited Brand Voices</li>
+                        <li class="pricing-feature">Custom Analytics & White-label Reports</li>
+                        <li class="pricing-feature">Dedicated Account Manager</li>
+                        <li class="pricing-feature">Advanced Team Management</li>
+                        <li class="pricing-feature">Custom AI Model Training</li>
+                        <li class="pricing-feature">Unlimited API Access</li>
+                        <li class="pricing-feature">99.9% SLA Guarantee</li>
+                        <li class="pricing-feature">Priority Phone Support</li>
+                    </ul>
+                    <button class="pricing-cta" onclick="window.open('https://www.scalenut.com/pricing/?fpr=mathew93', '_blank')">
+                        Start Pro Plan
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Revolutionary CTA Section -->
+    <section class="cta-section reveal">
+        <div class="cta-container">
+            <h2 class="cta-title">Ready to Scale Your Empire?</h2>
+            <p class="cta-description">
+                Join 250,000+ enterprise users who trust Scalenut to power their content intelligence operations. Start your transformation today.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://scalenut.com/?fpr=mathew93" class="btn btn-secondary" target="_blank">
+                    <i class="fas fa-rocket"></i>
+                    Start Free Enterprise Trial
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Premium Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Platform</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">AI Content Engine</a></li>
+                        <li><a href="#">Competitive Intelligence</a></li>
+                        <li><a href="#">Enterprise Suite</a></li>
+                        <li><a href="#">API & Integrations</a></li>
+                        <li><a href="#">Security & Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Solutions</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Enterprise</a></li>
+                        <li><a href="#">Marketing Teams</a></li>
+                        <li><a href="#">Content Agencies</a></li>
+                        <li><a href="#">E-commerce</a></li>
+                        <li><a href="#">SaaS Companies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">ROI Calculator</a></li>
+                        <li><a href="#">Content Templates</a></li>
+                        <li><a href="#">Expert Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Scalenut</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press Kit</a></li>
+                        <li><a href="#">Partner Program</a></li>
+                        <li><a href="#">Contact Sales</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Scalenut Enterprise. Engineered for scale. Trusted by industry leaders worldwide.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Ultra-Premium JavaScript Architecture
+        class UltraPremiumLanding {
+            constructor() {
+                this.initializeCore();
+                this.setupAdvancedEventListeners();
+                this.initializeAnimationEngine();
+                this.setupPerformanceOptimizations();
+                this.initializeIntelligentScrolling();
+            }
+            
+            initializeCore() {
+                // High-performance element caching
+                this.elements = {
+                    navigation: document.getElementById('navigation'),
+                    statNumbers: document.querySelectorAll('.stat-number'),
+                    revealElements: document.querySelectorAll('.reveal'),
+                    featureCards: document.querySelectorAll('.feature-card'),
+                    testimonialCards: document.querySelectorAll('.testimonial-card'),
+                    buttons: document.querySelectorAll('.btn'),
+                    orbs: document.querySelectorAll('.orb'),
+                    meshBackground: document.querySelector('.mesh-background'),
+                    gridOverlay: document.querySelector('.grid-overlay'),
+                    pricingToggle: document.getElementById('pricing-toggle'),
+                    pricingCheckbox: document.getElementById('pricing-checkbox'),
+                    annualLabel: document.getElementById('annual-label'),
+                    monthlyLabel: document.getElementById('monthly-label'),
+                    essentialPrice: document.getElementById('essential-price'),
+                    growthPrice: document.getElementById('growth-price'),
+                    proPrice: document.getElementById('pro-price'),
+                    essentialSavings: document.getElementById('essential-savings'),
+                    growthSavings: document.getElementById('growth-savings'),
+                    proSavings: document.getElementById('pro-savings')
+                };
+                
+                // Advanced state management
+                this.state = {
+                    isStatsAnimated: false,
+                    scrollY: 0,
+                    isScrolling: false,
+                    animationFrame: null,
+                    lastScrollTime: 0,
+                    intersectionObserver: null,
+                    isAnnualPricing: true
+                };
+                
+                // Pricing data
+                this.pricingData = {
+                    annual: {
+                        essential: 20,
+                        growth: 32,
+                        pro: 60
+                    },
+                    monthly: {
+                        essential: 49,
+                        growth: 79,
+                        pro: 149
+                    }
+                };
+                
+                // Performance metrics
+                this.metrics = {
+                    startTime: performance.now(),
+                    scrollEvents: 0,
+                    animationFrames: 0
+                };
+            }
+            
+            setupAdvancedEventListeners() {
+                // High-performance scroll handling with RAF throttling
+                window.addEventListener('scroll', this.handleScrollOptimized.bind(this), { passive: true });
+                window.addEventListener('load', this.handleLoad.bind(this));
+                window.addEventListener('resize', this.debounce(this.handleResize.bind(this), 250));
+                
+                // Advanced smooth scrolling
+                this.setupIntelligentNavigation();
+                
+                // Sophisticated interaction enhancements
+                this.setupAdvancedInteractions();
+                
+                // Performance monitoring
+                this.setupPerformanceMonitoring();
+                
+                // Pricing toggle functionality
+                this.setupPricingToggle();
+            }
+            
+            handleScrollOptimized() {
+                this.metrics.scrollEvents++;
+                
+                if (!this.state.isScrolling) {
+                    this.state.isScrolling = true;
+                    this.state.animationFrame = requestAnimationFrame(() => {
+                        this.handleScroll();
+                        this.state.isScrolling = false;
+                        this.metrics.animationFrames++;
+                    });
+                }
+            }
+            
+            handleScroll() {
+                this.state.scrollY = window.pageYOffset;
+                this.state.lastScrollTime = performance.now();
+                
+                // Advanced navigation updates
+                this.updateNavigationState();
+                
+                // Intelligent reveal animations
+                this.handleIntelligentReveals();
+                
+                // Stats animation trigger
+                this.handleStatsAnimation();
+                
+                // Advanced parallax effects
+                this.handleAdvancedParallax();
+            }
+            
+            handleLoad() {
+                // Remove loading state with sophisticated timing
+                setTimeout(() => {
+                    document.body.classList.remove('loading');
+                    this.initializeRevealObserver();
+                    this.triggerInitialAnimations();
+                }, 100);
+            }
+            
+            handleResize() {
+                // Responsive optimizations
+                this.updateViewportDependentElements();
+            }
+            
+            updateNavigationState() {
+                const threshold = 100;
+                const navigation = this.elements.navigation;
+                
+                if (this.state.scrollY > threshold) {
+                    if (!navigation.classList.contains('scrolled')) {
+                        navigation.classList.add('scrolled');
+                        this.animateNavigationTransition(true);
+                    }
+                } else {
+                    if (navigation.classList.contains('scrolled')) {
+                        navigation.classList.remove('scrolled');
+                        this.animateNavigationTransition(false);
+                    }
+                }
+            }
+            
+            animateNavigationTransition(isScrolled) {
+                const logo = document.querySelector('.nav-logo');
+                const cta = document.querySelector('.nav-cta');
+                
+                if (isScrolled) {
+                    logo.style.transform = 'scale(0.95)';
+                    cta.style.transform = 'scale(0.95)';
+                } else {
+                    logo.style.transform = 'scale(1)';
+                    cta.style.transform = 'scale(1)';
+                }
+            }
+            
+            handleIntelligentReveals() {
+                // High-performance intersection detection
+                this.elements.revealElements.forEach((element, index) => {
+                    if (!element.classList.contains('active')) {
+                        const rect = element.getBoundingClientRect();
+                        const threshold = window.innerHeight * 0.15;
+                        
+                        if (rect.top < window.innerHeight - threshold && rect.bottom > threshold) {
+                            setTimeout(() => {
+                                element.classList.add('active');
+                                this.triggerElementRevealEffects(element);
+                            }, index * 50); // Staggered reveals
+                        }
+                    }
+                });
+            }
+            
+            triggerElementRevealEffects(element) {
+                // Add sophisticated reveal effects
+                const children = element.querySelectorAll('.feature-card, .testimonial-card, .stat-item');
+                children.forEach((child, index) => {
+                    setTimeout(() => {
+                        child.style.transform = 'translateY(0) scale(1)';
+                        child.style.opacity = '1';
+                    }, index * 100);
+                });
+            }
+            
+            handleStatsAnimation() {
+                if (!this.state.isStatsAnimated) {
+                    const statsSection = document.querySelector('.stats');
+                    if (statsSection) {
+                        const rect = statsSection.getBoundingClientRect();
+                        if (rect.top < window.innerHeight * 0.8 && rect.bottom > 0) {
+                            this.state.isStatsAnimated = true;
+                            this.animateStatsWithSophistication();
+                        }
+                    }
+                }
+            }
+            
+            animateStatsWithSophistication() {
+                this.elements.statNumbers.forEach((counter, index) => {
+                    setTimeout(() => {
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        const duration = 2500;
+                        const startTime = performance.now();
+                        
+                        const animateCounter = (currentTime) => {
+                            const elapsed = currentTime - startTime;
+                            const progress = Math.min(elapsed / duration, 1);
+                            
+                            // Advanced easing function for natural feel
+                            const easeOutExpo = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+                            const current = Math.floor(target * easeOutExpo);
+                            
+                            counter.textContent = this.formatNumberWithPrecision(current);
+                            
+                            if (progress < 1) {
+                                requestAnimationFrame(animateCounter);
+                            } else {
+                                counter.textContent = this.formatNumberWithPrecision(target);
+                                this.addNumberGlowEffect(counter);
+                            }
+                        };
+                        
+                        requestAnimationFrame(animateCounter);
+                        counter.parentElement.classList.add('animate');
+                        
+                        // Add sophisticated sound effect (if audio is enabled)
+                        this.playCounterSound();
+                        
+                    }, index * 200);
+                });
+            }
+            
+            addNumberGlowEffect(element) {
+                element.style.textShadow = '0 0 20px rgba(102, 126, 234, 0.5)';
+                setTimeout(() => {
+                    element.style.textShadow = '';
+                }, 1000);
+            }
+            
+            playCounterSound() {
+                // Subtle audio feedback for premium experience
+                try {
+                    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                    const oscillator = audioContext.createOscillator();
+                    const gainNode = audioContext.createGain();
+                    
+                    oscillator.connect(gainNode);
+                    gainNode.connect(audioContext.destination);
+                    
+                    oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+                    gainNode.gain.setValueAtTime(0.01, audioContext.currentTime);
+                    gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.1);
+                    
+                    oscillator.start(audioContext.currentTime);
+                    oscillator.stop(audioContext.currentTime + 0.1);
+                } catch (e) {
+                    // Audio not supported or blocked
+                }
+            }
+            
+            handleAdvancedParallax() {
+                const scrollFactor = this.state.scrollY * 0.5;
+                
+                // Sophisticated parallax for orbs
+                this.elements.orbs.forEach((orb, index) => {
+                    const speed = 0.3 + (index * 0.1);
+                    const yOffset = scrollFactor * speed;
+                    const rotation = this.state.scrollY * 0.02 * (index + 1);
+                    const scale = 1 + Math.sin(this.state.scrollY * 0.001 + index) * 0.1;
+                    
+                    orb.style.transform = `
+                        translateY(${yOffset}px) 
+                        rotate(${rotation}deg) 
+                        scale(${scale})
+                    `;
+                });
+                
+                // Background effects
+                if (this.elements.meshBackground) {
+                    const meshOffset = this.state.scrollY * 0.1;
+                    this.elements.meshBackground.style.transform = `translateY(${meshOffset}px) scale(${1 + meshOffset * 0.0001})`;
+                }
+            }
+            
+            formatNumberWithPrecision(num) {
+                if (num >= 1000000) {
+                    return (num / 1000000).toFixed(1).replace('.0', '') + 'M';
+                } else if (num >= 1000) {
+                    return (num / 1000).toFixed(0) + 'K';
+                } else {
+                    return num.toString();
+                }
+            }
+            
+            setupIntelligentNavigation() {
+                // Advanced smooth scrolling with momentum
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const targetId = anchor.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+                        
+                        if (targetElement) {
+                            this.smoothScrollToElement(targetElement);
+                        }
+                    });
+                });
+            }
+            
+            smoothScrollToElement(element) {
+                const targetPosition = element.offsetTop - 80;
+                const startPosition = window.pageYOffset;
+                const distance = targetPosition - startPosition;
+                const duration = Math.min(Math.abs(distance) * 0.5, 1200);
+                let startTime = null;
+                
+                const animation = (currentTime) => {
+                    if (startTime === null) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    const progress = Math.min(timeElapsed / duration, 1);
+                    
+                    // Advanced easing for natural scroll feel
+                    const easeInOutCubic = progress < 0.5 
+                        ? 4 * progress * progress * progress 
+                        : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+                    
+                    window.scrollTo(0, startPosition + distance * easeInOutCubic);
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(animation);
+                    }
+                };
+                
+                requestAnimationFrame(animation);
+            }
+            
+            setupAdvancedInteractions() {
+                // Sophisticated button interactions
+                this.elements.buttons.forEach(button => {
+                    button.addEventListener('mouseenter', (e) => {
+                        this.createRippleEffect(e.target, e);
+                        this.enhanceButtonHover(e.target, true);
+                    });
+                    
+                    button.addEventListener('mouseleave', (e) => {
+                        this.enhanceButtonHover(e.target, false);
+                    });
+                    
+                    button.addEventListener('mousedown', (e) => {
+                        this.createPressEffect(e.target);
+                    });
+                    
+                    button.addEventListener('mouseup', (e) => {
+                        this.removePressEffect(e.target);
+                    });
+                });
+                
+                // Advanced feature card interactions
+                this.elements.featureCards.forEach((card, index) => {
+                    card.addEventListener('mouseenter', () => {
+                        this.enhanceCardHover(card, true);
+                        this.addCardGlow(card);
+                    });
+                    
+                    card.addEventListener('mouseleave', () => {
+                        this.enhanceCardHover(card, false);
+                        this.removeCardGlow(card);
+                    });
+                    
+                    // Add subtle card tilt on mouse move
+                    card.addEventListener('mousemove', (e) => {
+                        this.addCardTiltEffect(card, e);
+                    });
+                });
+                
+                // Testimonial card interactions
+                this.elements.testimonialCards.forEach(card => {
+                    card.addEventListener('mouseenter', () => {
+                        this.enhanceTestimonialHover(card, true);
+                    });
+                    
+                    card.addEventListener('mouseleave', () => {
+                        this.enhanceTestimonialHover(card, false);
+                    });
+                });
+            }
+            
+            createRippleEffect(button, event) {
+                const rect = button.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = event.clientX - rect.left - size / 2;
+                const y = event.clientY - rect.top - size / 2;
+                
+                const ripple = document.createElement('span');
+                ripple.style.cssText = `
+                    position: absolute;
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${x}px;
+                    top: ${y}px;
+                    background: rgba(255, 255, 255, 0.3);
+                    border-radius: 50%;
+                    transform: scale(0);
+                    animation: ripple 0.6s ease-out;
+                    pointer-events: none;
+                `;
+                
+                button.style.position = 'relative';
+                button.style.overflow = 'hidden';
+                button.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            }
+            
+            enhanceButtonHover(button, isHovering) {
+                if (isHovering) {
+                    button.style.transform = 'translateY(-3px) scale(1.02)';
+                    button.style.boxShadow = '0 20px 40px rgba(102, 126, 234, 0.4)';
+                } else {
+                    button.style.transform = 'translateY(0) scale(1)';
+                    button.style.boxShadow = '';
+                }
+            }
+            
+            createPressEffect(button) {
+                button.style.transform = 'translateY(-1px) scale(0.98)';
+            }
+            
+            removePressEffect(button) {
+                button.style.transform = 'translateY(-3px) scale(1.02)';
+            }
+            
+            enhanceCardHover(card, isHovering) {
+                if (isHovering) {
+                    card.style.transform = 'translateY(-12px) rotateX(5deg) scale(1.02)';
+                    card.style.boxShadow = '0 25px 50px rgba(0, 0, 0, 0.2)';
+                    card.style.zIndex = '10';
+                } else {
+                    card.style.transform = 'translateY(0) rotateX(0deg) scale(1)';
+                    card.style.boxShadow = '';
+                    card.style.zIndex = '1';
+                }
+            }
+            
+            addCardGlow(card) {
+                const icon = card.querySelector('.feature-icon');
+                if (icon) {
+                    icon.style.boxShadow = '0 0 30px rgba(102, 126, 234, 0.6)';
+                }
+            }
+            
+            removeCardGlow(card) {
+                const icon = card.querySelector('.feature-icon');
+                if (icon) {
+                    icon.style.boxShadow = '';
+                }
+            }
+            
+            addCardTiltEffect(card, event) {
+                const rect = card.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                const mouseX = event.clientX;
+                const mouseY = event.clientY;
+                
+                const rotateX = (mouseY - centerY) / 10;
+                const rotateY = (centerX - mouseX) / 10;
+                
+                card.style.transform = `
+                    translateY(-12px) 
+                    rotateX(${5 + rotateX}deg) 
+                    rotateY(${rotateY}deg) 
+                    scale(1.02)
+                `;
+            }
+            
+            enhanceTestimonialHover(card, isHovering) {
+                if (isHovering) {
+                    card.style.transform = 'translateY(-6px) scale(1.02)';
+                    card.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.15)';
+                } else {
+                    card.style.transform = 'translateY(0) scale(1)';
+                    card.style.boxShadow = '';
+                }
+            }
+            
+            initializeRevealObserver() {
+                // High-performance Intersection Observer
+                const options = {
+                    threshold: [0.1, 0.25, 0.5, 0.75],
+                    rootMargin: '50px 0px -100px 0px'
+                };
+                
+                this.state.intersectionObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
+                            entry.target.classList.add('active');
+                            this.triggerAdvancedRevealAnimation(entry.target);
+                        }
+                    });
+                }, options);
+                
+                this.elements.revealElements.forEach(element => {
+                    this.state.intersectionObserver.observe(element);
+                });
+            }
+            
+            triggerAdvancedRevealAnimation(element) {
+                // Add sophisticated staggered animations
+                const animatableChildren = element.querySelectorAll('.feature-card, .testimonial-card, .stat-item, h2, h3, p');
+                
+                animatableChildren.forEach((child, index) => {
+                    setTimeout(() => {
+                        child.style.opacity = '1';
+                        child.style.transform = 'translateY(0) scale(1)';
+                        child.style.filter = 'blur(0)';
+                    }, index * 50);
+                });
+            }
+            
+            triggerInitialAnimations() {
+                // Sophisticated hero animations
+                const heroElements = [
+                    '.hero-badge',
+                    '.hero-title', 
+                    '.hero-description',
+                    '.hero-cta'
+                ];
+                
+                heroElements.forEach((selector, index) => {
+                    const element = document.querySelector(selector);
+                    if (element) {
+                        setTimeout(() => {
+                            element.style.opacity = '1';
+                            element.style.transform = 'translateY(0) scale(1)';
+                        }, 200 + (index * 150));
+                    }
+                });
+                
+                // Initialize floating orb animations
+                this.initializeOrbAnimations();
+            }
+            
+            initializeOrbAnimations() {
+                this.elements.orbs.forEach((orb, index) => {
+                    const randomDelay = Math.random() * 2000;
+                    const randomDuration = 6000 + Math.random() * 4000;
+                    
+                    setTimeout(() => {
+                        orb.style.animationDuration = `${randomDuration}ms`;
+                        orb.style.opacity = '0.1';
+                    }, randomDelay);
+                });
+            }
+            
+            setupPerformanceOptimizations() {
+                // Preload critical resources
+                this.preloadCriticalAssets();
+                
+                // Initialize performance monitoring
+                this.initializePerformanceMonitoring();
+                
+                // Setup memory cleanup
+                this.setupMemoryManagement();
+            }
+            
+            preloadCriticalAssets() {
+                // Preload images that will be needed
+                const criticalImages = [
+                    // Add any critical images here
+                ];
+                
+                criticalImages.forEach(src => {
+                    const img = new Image();
+                    img.src = src;
+                });
+            }
+            
+            initializePerformanceMonitoring() {
+                // Monitor FPS and performance
+                let lastTime = performance.now();
+                let frames = 0;
+                
+                const measureFPS = (currentTime) => {
+                    frames++;
+
+                    
+                    if (currentTime >= lastTime + 1000) {
+                        const fps = Math.round((frames * 1000) / (currentTime - lastTime));
+                        
+                        // Log performance metrics
+                        if (fps < 30) {
+                            console.warn(`Low FPS detected: ${fps}`);
+                            this.optimizeForLowPerformance();
+                        }
+                        
+                        frames = 0;
+                        lastTime = currentTime;
+                    }
+                    
+                    requestAnimationFrame(measureFPS);
+                };
+                
+                requestAnimationFrame(measureFPS);
+            }
+            
+            optimizeForLowPerformance() {
+                // Reduce animation complexity for low-performance devices
+                document.body.classList.add('reduced-motion');
+                
+                // Simplify parallax effects
+                this.elements.orbs.forEach(orb => {
+                    orb.style.animation = 'none';
+                });
+            }
+            
+            setupMemoryManagement() {
+                // Cleanup on page unload
+                window.addEventListener('beforeunload', () => {
+                    this.cleanup();
+                });
+                
+                // Periodic memory cleanup
+                setInterval(() => {
+                    this.performMemoryCleanup();
+                }, 30000);
+            }
+            
+            performMemoryCleanup() {
+                // Clean up any lingering event listeners or animations
+                if (this.state.animationFrame) {
+                    cancelAnimationFrame(this.state.animationFrame);
+                }
+                
+                // Clear any temporary DOM elements
+                document.querySelectorAll('[data-temporary]').forEach(el => {
+                    el.remove();
+                });
+            }
+            
+            setupPricingToggle() {
+                if (!this.elements.pricingToggle) return;
+                
+                // Initialize pricing display
+                this.updatePricingDisplay();
+                
+                // Add click event listener
+                this.elements.pricingToggle.addEventListener('click', () => {
+                    this.togglePricing();
+                });
+                
+                // Add keyboard accessibility
+                this.elements.pricingToggle.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.togglePricing();
+                    }
+                });
+                
+                // Make toggle focusable
+                this.elements.pricingToggle.setAttribute('tabindex', '0');
+                this.elements.pricingToggle.setAttribute('role', 'switch');
+                this.elements.pricingToggle.setAttribute('aria-checked', 'true');
+            }
+            
+            togglePricing() {
+                this.state.isAnnualPricing = !this.state.isAnnualPricing;
+                this.updatePricingDisplay();
+                
+                // Update toggle switch position
+                if (this.state.isAnnualPricing) {
+                    this.elements.pricingToggle.classList.remove('monthly');
+                    this.elements.pricingToggle.setAttribute('aria-checked', 'true');
+                } else {
+                    this.elements.pricingToggle.classList.add('monthly');
+                    this.elements.pricingToggle.setAttribute('aria-checked', 'false');
+                }
+                
+                // Update label states
+                this.elements.annualLabel.classList.toggle('active', this.state.isAnnualPricing);
+                this.elements.monthlyLabel.classList.toggle('active', !this.state.isAnnualPricing);
+                
+                // Add smooth transition effects
+                this.animatePriceChange();
+            }
+            
+            updatePricingDisplay() {
+                const pricing = this.state.isAnnualPricing ? this.pricingData.annual : this.pricingData.monthly;
+                
+                // Update prices with smooth animation
+                if (this.elements.essentialPrice) {
+                    this.animateNumber(this.elements.essentialPrice, pricing.essential);
+                }
+                if (this.elements.growthPrice) {
+                    this.animateNumber(this.elements.growthPrice, pricing.growth);
+                }
+                if (this.elements.proPrice) {
+                    this.animateNumber(this.elements.proPrice, pricing.pro);
+                }
+                
+                // Show/hide savings badges
+                const savingsElements = [
+                    this.elements.essentialSavings,
+                    this.elements.growthSavings,
+                    this.elements.proSavings
+                ];
+                
+                savingsElements.forEach(element => {
+                    if (element) {
+                        if (this.state.isAnnualPricing) {
+                            element.classList.add('show');
+                        } else {
+                            element.classList.remove('show');
+                        }
+                    }
+                });
+            }
+            
+            animateNumber(element, targetNumber) {
+                if (!element) return;
+                
+                const currentNumber = parseInt(element.textContent);
+                const duration = 500;
+                const startTime = performance.now();
+                
+                const animate = (currentTime) => {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    
+                    // Smooth easing function
+                    const easeInOutCubic = progress < 0.5 
+                        ? 4 * progress * progress * progress 
+                        : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+                    
+                    const current = Math.round(currentNumber + (targetNumber - currentNumber) * easeInOutCubic);
+                    element.textContent = current;
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(animate);
+                    } else {
+                        element.textContent = targetNumber;
+                    }
+                };
+                
+                requestAnimationFrame(animate);
+            }
+            
+            animatePriceChange() {
+                // Add a subtle scale animation to pricing cards
+                const pricingCards = document.querySelectorAll('.pricing-card');
+                
+                pricingCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.style.transform = 'scale(1.02)';
+                        setTimeout(() => {
+                            card.style.transform = '';
+                        }, 200);
+                    }, index * 50);
+                });
+                
+                // Add ripple effect to toggle
+                this.createToggleRipple();
+            }
+            
+            createToggleRipple() {
+                if (!this.elements.pricingToggle) return;
+                
+                const ripple = document.createElement('div');
+                ripple.style.cssText = `
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 80px;
+                    height: 80px;
+                    background: rgba(102, 126, 234, 0.3);
+                    border-radius: 50%;
+                    transform: translate(-50%, -50%) scale(0);
+                    animation: toggleRipple 0.6s ease-out;
+                    pointer-events: none;
+                `;
+                
+                this.elements.pricingToggle.style.position = 'relative';
+                this.elements.pricingToggle.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            }
+            
+            cleanup() {
+                // Disconnect observers
+                if (this.state.intersectionObserver) {
+                    this.state.intersectionObserver.disconnect();
+                }
+                
+                // Cancel any pending animations
+                if (this.state.animationFrame) {
+                    cancelAnimationFrame(this.state.animationFrame);
+                }
+                
+                // Remove event listeners
+                window.removeEventListener('scroll', this.handleScrollOptimized);
+                window.removeEventListener('resize', this.handleResize);
+            }
+            
+            // Utility functions
+            debounce(func, wait) {
+                let timeout;
+                return function executedFunction(...args) {
+                    const later = () => {
+                        clearTimeout(timeout);
+                        func(...args);
+                    };
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                };
+            }
+            
+            updateViewportDependentElements() {
+                // Update elements that depend on viewport size
+                const vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh}px`);
+            }
+            
+            initializeAnimationEngine() {
+                // Add CSS for dynamic animations
+                const style = document.createElement('style');
+                style.textContent = `
+                    @keyframes ripple {
+                        to {
+                            transform: scale(2);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    @keyframes toggleRipple {
+                        to {
+                            transform: translate(-50%, -50%) scale(1);
+                            opacity: 0;
+                        }
+                    }
+                    
+                    .reduced-motion * {
+                        animation-duration: 0.01ms !important;
+                        transition-duration: 0.01ms !important;
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+            
+            initializeIntelligentScrolling() {
+                // Advanced scroll behavior
+                this.lastScrollDirection = 'down';
+                this.scrollThreshold = 10;
+                
+                let lastScrollY = window.pageYOffset;
+                
+                const detectScrollDirection = () => {
+                    const currentScrollY = window.pageYOffset;
+                    
+                    if (Math.abs(currentScrollY - lastScrollY) > this.scrollThreshold) {
+                        this.lastScrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
+                        lastScrollY = currentScrollY;
+                        
+                        // Add scroll direction to body class
+                        document.body.classList.toggle('scrolling-down', this.lastScrollDirection === 'down');
+                        document.body.classList.toggle('scrolling-up', this.lastScrollDirection === 'up');
+                    }
+                    
+                    requestAnimationFrame(detectScrollDirection);
+                };
+                
+                requestAnimationFrame(detectScrollDirection);
+            }
+            
+            setupPerformanceMonitoring() {
+                // Advanced performance monitoring
+                const observer = new PerformanceObserver((list) => {
+                    for (const entry of list.getEntries()) {
+                        if (entry.entryType === 'measure') {
+                            console.log(`Performance: ${entry.name} took ${entry.duration}ms`);
+                        }
+                    }
+                });
+                
+                observer.observe({ entryTypes: ['measure'] });
+                
+                // Mark critical performance points
+                performance.mark('landing-page-init-start');
+                
+                setTimeout(() => {
+                    performance.mark('landing-page-init-end');
+                    performance.measure('landing-page-init', 'landing-page-init-start', 'landing-page-init-end');
+                }, 100);
+            }
+        }
+        
+        // Initialize the ultra-premium landing page
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                window.ultraPremiumLanding = new UltraPremiumLanding();
+                console.log('🚀 Ultra-Premium Landing Page Initialized');
+            } catch (error) {
+                console.error('Failed to initialize Ultra-Premium Landing:', error);
+                // Fallback initialization
+                document.body.classList.remove('loading');
+            }
+        });
+        
+        // Advanced font loading optimization
+        if ('fonts' in document) {
+            document.fonts.ready.then(() => {
+                document.body.classList.add('fonts-loaded');
+                console.log('✨ Premium fonts loaded');
+            });
+        }
+        
+        // Service Worker registration for premium caching
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                // Register service worker for premium caching experience
+                // navigator.serviceWorker.register('/sw.js');
+            });
+        }
+        
+    </script>
+</body>
+</html>
