@@ -2222,10 +2222,9 @@
                         this.removeCardGlow(card);
                     });
                     
-                    // Add subtle card tilt on mouse move
-                    card.addEventListener('mousemove', (e) => {
-                        this.addCardTiltEffect(card, e);
-                    });
+                    // Add subtle card tilt on mouse move with throttling
+                    const throttledTilt = this.throttle((e) => this.addCardTiltEffect(card, e), 16); // ~60fps
+                    card.addEventListener('mousemove', throttledTilt);
                 });
                 
                 // Testimonial card interactions
@@ -2241,12 +2240,16 @@
             }
             
             createRippleEffect(button, event) {
+                // Prevent multiple ripples
+                if (button.querySelector('.ripple-effect')) return;
+                
                 const rect = button.getBoundingClientRect();
                 const size = Math.max(rect.width, rect.height);
                 const x = event.clientX - rect.left - size / 2;
                 const y = event.clientY - rect.top - size / 2;
                 
                 const ripple = document.createElement('span');
+                ripple.className = 'ripple-effect';
                 ripple.style.cssText = `
                     position: absolute;
                     width: ${size}px;
@@ -2271,11 +2274,13 @@
             
             enhanceButtonHover(button, isHovering) {
                 if (isHovering) {
+                    button.style.willChange = 'transform, box-shadow';
                     button.style.transform = 'translateY(-3px) scale(1.02)';
                     button.style.boxShadow = '0 20px 40px rgba(102, 126, 234, 0.4)';
                 } else {
                     button.style.transform = 'translateY(0) scale(1)';
                     button.style.boxShadow = '';
+                    setTimeout(() => button.style.willChange = '', 300);
                 }
             }
             
@@ -2289,6 +2294,7 @@
             
             enhanceCardHover(card, isHovering) {
                 if (isHovering) {
+                    card.style.willChange = 'transform, box-shadow';
                     card.style.transform = 'translateY(-12px) rotateX(5deg) scale(1.02)';
                     card.style.boxShadow = '0 25px 50px rgba(0, 0, 0, 0.2)';
                     card.style.zIndex = '10';
@@ -2296,6 +2302,7 @@
                     card.style.transform = 'translateY(0) rotateX(0deg) scale(1)';
                     card.style.boxShadow = '';
                     card.style.zIndex = '1';
+                    setTimeout(() => card.style.willChange = '', 300); // Remove after transition
                 }
             }
             
@@ -2323,21 +2330,25 @@
                 const rotateX = (mouseY - centerY) / 10;
                 const rotateY = (centerX - mouseX) / 10;
                 
-                card.style.transform = `
-                    translateY(-12px) 
-                    rotateX(${5 + rotateX}deg) 
-                    rotateY(${rotateY}deg) 
-                    scale(1.02)
-                `;
+                requestAnimationFrame(() => {
+                    card.style.transform = `
+                        translateY(-12px) 
+                        rotateX(${5 + rotateX}deg) 
+                        rotateY(${rotateY}deg) 
+                        scale(1.02)
+                    `;
+                });
             }
             
             enhanceTestimonialHover(card, isHovering) {
                 if (isHovering) {
+                    card.style.willChange = 'transform, box-shadow';
                     card.style.transform = 'translateY(-6px) scale(1.02)';
                     card.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.15)';
                 } else {
                     card.style.transform = 'translateY(0) scale(1)';
                     card.style.boxShadow = '';
+                    setTimeout(() => card.style.willChange = '', 300);
                 }
             }
             
@@ -2670,6 +2681,17 @@
                     };
                     clearTimeout(timeout);
                     timeout = setTimeout(later, wait);
+                };
+            }
+            
+            throttle(func, limit) {
+                let inThrottle;
+                return function executedFunction(...args) {
+                    if (!inThrottle) {
+                        func.apply(this, args);
+                        inThrottle = true;
+                        setTimeout(() => inThrottle = false, limit);
+                    }
                 };
             }
             
